@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design Example</title>
+    <style>
+        body {
+            background-color: #04AA6D;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .main-content {
+            float: left;
+            width: 70%;
+        }
+
+        .sidebar {
+            float: left;
+            width: 30%;
+            background-color: #eee;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            clear: both;
+        }
+
+        @media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Responsive Web Design Example</h1>
+    </header>
+
+    <nav>
+        <div class="topnav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+        
+    </nav>
+
+    <div class="container">
+        <div class="main-content">
+            <h2>Animals of Australia</h2>
+            <p>The animals that Australia is most known for are, no doubt, marsupials. Marsupials come in all shapes and sizes in Australia, from the stately Red kangaroo that weighs in at 90 kg to the tiny Long-tailed Planigale that weighs all of 4.3 grams as an adult..</p>
+            <img src="https://media.npr.org/assets/img/2018/12/10/roger-the-kangaroo-sanctuary-alice-springs-2_custom-e0dfceba6d2665cc8cc0daa5a57eae2bcda46ad8-s1100-c50.jpg" alt="Red Kangaroo" width="300">
+            <p> Red kangaroo </p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Koala_climbing_tree.jpg/360px-Koala_climbing_tree.jpg" alt="Koala" width="300">
+            <p> Koala </p>
+        </div>
+        <div class="sidebar">
+            <h2>Video</h2>
+            <p>This is video content about animals of australia.</p>
+            <!-- Embed a YouTube video -->
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/pkQpYG80WAo" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Responsive Web Design Example</p>
+    </footer>
+</body>
+</html>

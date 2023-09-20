@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Methods</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Specific styles for elements with IDs */
+        #demo1 {
+            font-weight: bold;
+        }
+
+        #demo2 {
+            font-style: italic;
+        }
+
+        #demo3 {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>This is my JavaScript file.</h1>
+    </header>
+    <div class="container">
+        <h2>JavaScript String Methods</h2>
+        <h3>The length Method</h3>
+        <p>The length of the string is:</p>
+        <p id="demo1"></p>
+
+      
+        <h3>The slice() Method</h3>
+        <p>The sliced (extracted) part of the string is:</p>
+        <p id="demo2"></p>
+
+        <h3>The substr() Method</h3>
+        <p>The substr() method extracts a part of a string
+        and returns the extracted part in a new string:</p>
+        <p id="demo3"></p>
+
+      <h3>The replace() Method </h3>
+<p>Replace "Toyota" with "Ferrari" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo4">Toyota is the best car!</p>
+
+
+<h3>The concat() Method</h3>
+<p>The concat() method joins two or more strings:</p>
+
+<p id="demo5"></p>
+
+<h2>JavaScript Number Methods</h2>
+
+<h3>The toString() Method</h3>
+<p>The toString() method converts a number to a string.</p>
+
+<p id="demo6"></p>
+
+<h3>The tofixed() Method</h3>
+<p>The toFixed() method rounds a number to a given number of digits.</p>
+
+<p id="demo7"></p>
+
+<h3>The toPrecision() Method</h3>
+<p>The toPrecision() method returns a string, with a number written with a specified length:</p>
+
+<p id="demo8"></p>
+
+<h3>The valueOf Method</h3>
+<p>The valueOf() method returns a number as a number. In JavaScript, a number can be a primitive value (typeof = number) or an object (typeof = object).
+
+    The valueOf() method is used internally in JavaScript to convert Number objects to primitive values.</p>
+
+<p id="demo9"></p>
+
+<h3>The isInteger() Method</h3>
+<p>The isInteger() method returns true if the argument is an integer.</p>
+<p>Otherwise it returns false.</p>
+
+<p id="demo10"></p>
+
+<h2>JavaScript Array Methods</h2>
+    
+<h3>The join() Method</h3>
+<p>The join() method joins array elements into a string.</p>
+<p>It this example we have used " * " as a separator between the elements:</p>
+
+<p id="demo11"></p>
+
+<h3>The pop() Method</h3>
+<p>The pop() method removes the last element from an array.</p>
+
+<p id="demo12"></p>
+<p id="demo13"></p>
+
+<h3>The push() Method</h3>
+<p>The push() method appends a new element to an array:</p>
+
+<p id="demo14"></p>
+<p id="demo15"></p>
+
+<h3>The shift() Method</h3>
+<p>The shift() method removes the first element of an array (and "shifts" the other elements to the left):</p>
+
+<p id="demo16"></p>
+<p id="demo17"></p>
+
+<h3>The unshift() Method</h3>
+<p>The unshift() method adds new elements to the beginning of an array:</p>
+
+<p id="demo18"></p>
+<p id="demo19"></p>
+
+<h2>JavaScript Date Methods</h2>
+
+<h3>The getMonth() Method</h3>
+<p>Return the month of a date as a number from 0 to 11.</p>
+<p>To get the correct month number, you must add 1:</p>
+
+<p id="demo20"></p>
+
+<h3>The getDate() Method</h3>
+<p>Return the day of a date as a number (1-31):</p>
+
+<p id="demo21"></p>
+
+<h3>The getHours() Method</h3>
+<p>Return the hours of a date as a number (0-23):</p>
+
+<p id="demo22"></p>
+
+
+<h3>JavaScript setFullYear() Method</h3>
+<p>The setFullYear() method sets the year of a date object:</p>
+
+<p id="demo23"></p>
+
+<h3>JavaScript setMonth() Method</h3>
+<p>The setMonth() method sets the mont of a date object.</p>
+<p>Note that months count from 0. December is month 11:</p>
+
+<p id="demo24"></p>
+
+<h2>JavaScript Function Methods</h2>
+
+<h3>The return function Method</h3>
+<p>Call a function which performs a calculation and returns the result:</p>
+
+<p id="demo25"></p>
+
+<h3>The () Operator Method</h3>
+<p>Invoke (call) a function that converts from Fahrenheit to Celsius:</p>
+
+<p id="demo26"></p>
+    </div>
+
+    <script> // String method 1 - length
+        let text = "HELLO WORLD";
+        document.getElementById("demo1").innerHTML = text.length;
+    </script>
+
+    <script> // String method 2 - slice
+        let text2 = "House, Hamster, Mouse";
+        let part = text2.slice(7, 14);
+        document.getElementById("demo2").innerHTML = "Sliced part: " + part;
+    </script>
+
+    <script> // String method 3 - substr
+        let str = "Carton, Rabbit , Cat";
+        document.getElementById("demo3").innerHTML = str.substr(8, 6);
+    </script>
+
+    <script> // String method 4 - replace
+function myFunction() {
+    let text = document.getElementById("demo4").innerHTML;
+    document.getElementById("demo4").innerHTML =
+    text.replace("Toyota","Ferrari");
+  }
+     </script>
+
+     <script> //String methods 5- concat
+let text3 = "Hello";
+let text4 = "User!";
+let text5 = text1.concat(" ",text2);
+document.getElementById("demo").innerHTML = text3;
+     </script>
+
+<script> 
+let x = 156;
+document.getElementById("demo6").innerHTML =
+  x.toString() + "<br>" +
+   (156).toString() + "<br>" +
+   (100 + 56).toString();
+</script>
+
+<script>
+    let y = 9.656;
+    document.getElementById("demo7").innerHTML =
+      y.toFixed(0) + "<br>" +
+      y.toFixed(2) + "<br>" +
+      y.toFixed(4) + "<br>" +
+      y.toFixed(6);
+    </script>
+
+<script>
+    let z = 9.656;
+    document.getElementById("demo8").innerHTML = 
+      z.toPrecision() + "<br>" +
+      z.toPrecision(2) + "<br>" +
+      z.toPrecision(4) + "<br>" +
+      z.toPrecision(6);  
+    </script>
+
+<script>
+    let a = 188;
+    
+    document.getElementById("demo9").innerHTML = 
+      a.valueOf() + "<br>" +
+      (188).valueOf() + "<br>" +
+      (100 + 88).valueOf();
+    </script>
+
+<script>
+    document.getElementById("demo10").innerHTML =
+    Number.isInteger(20) + "<br>" + Number.isInteger(20.5);
+    </script>
+
+<script>
+const fruits = ["Guava", "Grape", "Strawberry", "Blueberry"];
+document.getElementById("demo11").innerHTML = fruits.join(" * ");
+</script>
+
+<script>
+    //using same fruits array from last method
+    document.getElementById("demo12").innerHTML = fruits;
+    fruits.pop();
+    document.getElementById("demo13").innerHTML = fruits;
+    </script>
+
+<script>
+    //using same fruits array from previous methods
+    document.getElementById("demo14").innerHTML = fruits;
+    fruits.push("Kiwi");
+    document.getElementById("demo15").innerHTML = fruits;
+    </script>
+
+<script>
+    //using same fruits array from previous methods
+    document.getElementById("demo16").innerHTML = fruits;
+    fruits.shift();
+    document.getElementById("demo17").innerHTML = fruits;
+    </script>
+
+<script>
+    //using same fruits array from previous methods
+    document.getElementById("demo18").innerHTML = fruits;
+    fruits.unshift("Lemon");
+    document.getElementById("demo19").innerHTML = fruits;
+    </script>
+
+<script>
+    const d = new Date("2021-05-25");
+    document.getElementById("demo20").innerHTML = d.getMonth() + 1;
+    </script>
+
+<script>
+     //using same date as last method
+    document.getElementById("demo21").innerHTML = d.getDate();
+    </script>
+    
+    <script>
+    //using same date as the other methods above
+       document.getElementById("demo22").innerHTML = d.getHours();
+        </script>
+        
+<script>
+    const e = new Date();
+    e.setFullYear(2020);
+    document.getElementById("demo23").innerHTML = e;
+    </script>
+
+<script>
+    const f = new Date();
+    f.setMonth(11);
+    document.getElementById("demo24").innerHTML = f;
+    </script>
+    
+    <script>
+        let w = myFunction2(5, 4);
+        document.getElementById("demo25").innerHTML = w;
+        
+        function myFunction2(a, b) {
+          return a * b;
+        }
+        </script>
+
+<script>
+    function toCelsius(f) {
+      return (5/9) * (f-32);
+    }
+    
+    let value = toCelsius(77);
+    document.getElementById("demo26").innerHTML = value;
+    </script>
+    
+    
+</body>
+</html>
